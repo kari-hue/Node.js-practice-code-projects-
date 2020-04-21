@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-var geocodeAddress = (q) => {
+var geocodeAddress = (q,callback) => {
 
  var encodedAddress = encodeURIComponent(q);
 
@@ -13,24 +13,23 @@ request({
 
     if(error)
     {
-        console.log("Unable to connect with teh weather map");
+        callback("Unable to connect with teh weather map");
     }
     else if(body.status === 'ZERO_RESULTS'){
 
-        console.log('unable to find the address');
+        callback('unable to find the address');
     }
-    
-    console.log(`Printing the longitude  : ${body.coord.lon}`);
+    callback(undefined ,{
+        Longitude : body.coord.lon,
+        Latitude : body.coord.lat
+    });
+});
+}
 
-
-    console.log(`Printing the latitude : ${body.coord.lat}`);
-
-    
-    }
 
    
-);
-}
+
+
 
 module.exports.geocodeAddress = geocodeAddress;
     
