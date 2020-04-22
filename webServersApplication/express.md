@@ -46,6 +46,23 @@ app.use(express.static(__dirname + '/hello'));
 ```
 Bonus tip: ``` __dirname```  stores the path of your directory
 
+# handlebar.js
 
+* Handlebars is a simple templating language.
 
+* It uses a template and an input object to generate HTML or other text formats. Handlebars templates look like regular text with embedded Handlebars expressions.
 
+```html
+
+<p>{{firstname}} {{lastname}}</p>
+```
+
+# hbs
+
+Express.js view engine for handlebars.js
+
+install
+
+```javascript
+npm install hbs
+```
