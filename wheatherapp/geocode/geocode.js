@@ -24,7 +24,7 @@ request({
         Latitude : body.coord.lat
     });
 });
-}
+} 
 
 
    
