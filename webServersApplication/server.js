@@ -20,7 +20,7 @@ app.get('/about',(req,res)=> {
 
     res.render('about.hbs',{
     pageTitle:'Tell me about yourself',
-    Interest: 'In the sun'
+    Interests: 'In this beautiful day'
 });
 })
 
