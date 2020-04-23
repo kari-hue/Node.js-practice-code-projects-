@@ -44,6 +44,13 @@ express.static(root, [options])
 ```javascript
 app.use(express.static(__dirname + '/hello'));
 ```
+or do it the other way using path
+```javascript
+const path = require('path'); //require to use path
+
+//now using it in your program
+res.sendFile(path.join(__dirname,'directory name','filename'));
+```
 Bonus tip: ``` __dirname```  stores the path of your directory
 
 # handlebar.js
@@ -66,3 +73,21 @@ install
 ```javascript
 npm install hbs
 ```
+Using partials:
+
+```javascript
+
+hbs.registerPartials(__dirname + 'specify path')
+
+```
+
+ # Express Middleware
+
+ ```javascript
+ app.use ((req,res,next) =>{
+
+     //next tells your express when your middleware is done
+     //until you call next() nothing is going to run
+
+ }
+ ```
