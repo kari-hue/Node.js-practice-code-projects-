@@ -14,7 +14,7 @@ $ npm install express --save
 const express = require('express');
 ```
 var app = express(); 
-
+// creating a port at 3000
 const port = 3000;
 
 > setting up HTTP routes
@@ -49,7 +49,7 @@ or do it the other way using path
 const path = require('path'); //require to use path
 
 //now using it in your program
-res.sendFile(path.join(__dirname,'directory name','filename'));
+res.sendFile(path.join(__dirname,'../','directory name','filename')); // ../ means come out of the working directory
 ```
 Bonus tip: ``` __dirname```  stores the path of your directory
 
@@ -90,4 +90,18 @@ hbs.registerPartials(__dirname + 'specify path')
      //until you call next() nothing is going to run
 
  }
+ ```
+
+ ## Some build in function to use
+
+ * sendFile
+ * redirect()
+  
+
+ Note: if status === 200 {console.log("everything is fine");} else if (staus === 404){console.log("There is a problem");}
+
+ > express.Router Use the express.Router class to create modular, mountable route handlers.
+
+ ```javascript
+ const router = express.Router();
  ```
