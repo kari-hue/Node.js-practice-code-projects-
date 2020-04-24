@@ -13,6 +13,7 @@ const port = 3000;
 //     res.redirect('/');
     
 // });
+app.use(express.static(path.join(__dirname,'cssfile')));
 
 app.get('/users',(req,res) =>{
 
