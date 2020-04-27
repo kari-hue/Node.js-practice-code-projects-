@@ -1,0 +1,17 @@
+extends layout
+
+block layout-content
+  div.View.UserView
+    h1.Banner welcome to our #{tag}
+    div.Message
+      div.Title
+        h3 Making Us the Best
+        h1 Teammate Profile
+        div.NavButtons
+          a(href="/dataprofile")
+            div.NavButton user information
+        
+      pre.Details=JSON.stringify(userProfile, null, 2)
+    div.NavButtons
+      a(href="/")
+        div.NavButton Log out
