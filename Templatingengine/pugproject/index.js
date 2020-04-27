@@ -13,12 +13,15 @@ const port = process.env.port || 3000;
 
 
 //app configuration
+app.set("views",path.join(__dirname,"views"));
+app.set('view engine',"pug");
+app.use(express.static(path_join(__dirname,"public")));
 
 //routes defination
 
 app.get('/',(req,res) => {
 
-    res.status(200).send("Inventory Management");
+    res.render("index",{title : "Homepage"});
 });
 
 //server Activation
