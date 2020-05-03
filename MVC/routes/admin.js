@@ -18,5 +18,6 @@ router.get('/products',productController.getproduct);
 router.post('/add-product', productController.postAddProduct);
 
 module.exports = router;
+
 // exports.products = products;
 
